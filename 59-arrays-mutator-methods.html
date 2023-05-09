@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ARRAYS MUTATOR METHODS</title>
+    </head>
+    <body>
+        <h1>ARRAYS MUTATOR METHODS</h1>
+        <script>
+            const fruits = ["Apple", "Pear", "Banana", "Kiwi"];
+            console.log(fruits); // ['Apple', 'Pear', 'Banana', 'Kiwi']
+            fruits.pop(); // removes the last element in the array
+            console.log(fruits); // ['Apple', 'Pear', 'Banana']
+            fruits.push("Pineapple"); // adds element/elements to the end of the array
+            console.log(fruits); // ['Apple', 'Pear', 'Banana', 'Pineapple']
+            fruits.shift(); // removes the first element in the array
+            console.log(fruits); // ['Pear', 'Banana', 'Pineapple']
+            fruits.unshift("Strawberry"); // adds element/elements to the beginning of the array
+            console.log(fruits); // ['Strawberry', 'Pear', 'Banana', 'Pineapple']
+            fruits.reverse(); // sorts the array in reverse order
+            console.log(fruits); // ['Pineapple', 'Banana', 'Pear', 'Strawberry']
+            fruits.sort(); // sorts the array according to the letter
+            console.log(fruits); // ['Banana', 'Pear', 'Pineapple', 'Strawberry']
+            fruits.splice(1, 0, "Cherry"); // starting from the index number 1, remove 0 item/items, add "Cherry" to that index
+            console.log(fruits); // ['Banana', 'Cherry', 'Pear', 'Pineapple', 'Strawberry']
+            fruits.splice(3, 1, "Apricot"); // starting from the index number 3, remove 1 item/items, add "Apricot" to that index
+            console.log(fruits); // ['Banana', 'Cherry', 'Pear', 'Apricot', 'Strawberry']
+            fruits.splice(3, 2); // starting from the index number 3, remove 2 item/items
+            console.log(fruits); // ['Banana', 'Cherry', 'Pear']
+        </script>
+    </body>
+</html>

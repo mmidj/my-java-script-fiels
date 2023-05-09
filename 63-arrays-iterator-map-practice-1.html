@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ITERATOR METHODS — MAP — PRACTICE 1</title>
+    </head>
+    <body>
+        <h1>ITERATOR METHODS — MAP — PRACTICE 1</h1>
+        <script>
+            /*
+
+            Q — Write an application that converts all names to upper case in an array.
+
+            names = [ "Alex", "John",  "Hagrid", “Aragorn",  "Jack", “Galadriel” ];
+
+            */
+            const names = [
+                "Alex",
+                "John",
+                "Hagrid",
+                "Aragorn",
+                "Jack",
+                "Galadriel",
+            ];
+
+            const capitalNames = names.map((item, index) => {
+                console.log(item + " — " + index);
+                console.log(item.toUpperCase());
+                const upperCaseName = item.toUpperCase();
+                return upperCaseName;
+            });
+
+            console.log(capitalNames);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FUNCTIONS PRACTICE — 7 — PRIME</title>
+    </head>
+    <body>
+        <h1>FUNCTIONS PRACTICE — 7 — PRIME</h1>
+        <script>
+            /*
+
+            Q — Create a function that  finds whether a number is prime number or not.
+            
+            1 - if number is 1 => 1 is neither prime nor composite number!
+            2 - if number is bigger than 1 then do the check otherwise
+
+            3 - 0 , or negative numbers cant be prime numbers
+            
+            */
+
+            const userNum = +prompt("Please enter a positive number:");
+
+            const isPrime = (num) => {
+                let prime = true;
+                let sPoint = 2;
+
+                if (num === 1) {
+                    console.log("1 is neither prime nor composite number!");
+                } else if (num > 1) {
+                    for (let i = sPoint; i < num; i++) {
+                        if (num % i === 0) {
+                            prime = false;
+                            break;
+                        }
+                    }
+
+                    if (prime) {
+                        console.log(`${num} is a prime number`);
+                    } else {
+                        console.log(`${num} is not a prime number`);
+                    }
+                } else {
+                    console.log(
+                        `The number you have given is not a prime number`
+                    );
+                }
+            };
+
+            isPrime(userNum);
+        </script>
+    </body>
+</html>

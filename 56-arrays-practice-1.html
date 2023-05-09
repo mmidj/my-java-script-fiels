@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ARRAYS PRACTICE — 1</title>
+    </head>
+    <body>
+        <h1>ARRAYS PRACTICE — 1</h1>
+        <script>
+            /*
+
+            Q — Create a program that calculates the sum of numbers in an array
+
+            */
+            const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            const numbers1 = [
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,
+            ];
+
+            const findSum = (arr) => {
+                let sum = 0;
+                let sPoint = 0;
+
+                for (let i = sPoint; i < arr.length; i++) {
+                    sum += arr[i]; // sum = sum + arr[i];
+                }
+
+                return sum;
+            };
+
+            console.log(findSum(numbers));
+            console.log(findSum(numbers1));
+        </script>
+    </body>
+</html>

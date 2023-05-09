@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>IF ELSE PRACTICE — 2</title>
+    </head>
+    <body>
+        <h1>IF ELSE PRACTICE — 2</h1>
+
+        <label for="userText">Please enter a text: </label>
+        <input type="text" id="userText" />
+        <button onclick="greetByLength()">Greet</button>
+        <p id="result"></p>
+
+        <script>
+            /*
+            
+Q — Write a program that receives text from the user.
+
+1 – If the text length is between 2 and 50, display “Hello!”
+2 – if not, display an error;
+
+            */
+
+            function greetByLength() {
+                let userText = document.querySelector("#userText").value;
+                let result = document.querySelector("#result");
+                console.log(userText.length);
+
+                let min = 2;
+                let max = 50;
+
+                if (userText.length < max && userText.length > min) {
+                    result.innerText = "Hello";
+                } else {
+                    result.innerText = "This is not a valid length";
+                }
+            }
+        </script>
+    </body>
+</html>

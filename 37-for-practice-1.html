@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FOR PRACTICE — 1</title>
+    </head>
+    <body>
+        <h1>FOR PRACTICE 1</h1>
+        <h3 id="result"></h3>
+
+        <script>
+            /*
+            
+Q — Write a program that finds the average of 10 entered numbers.
+
+            */
+            let sum = 0;
+            const numberOfLoops = 5;
+
+            for (let i = 0; i < numberOfLoops; i++) {
+                let num = +prompt(`${i + 1}. Please enter a number`);
+                // let num = Number(prompt(`${i}. Please enter a number`));
+                sum += num; // sum = sum + num;
+            }
+
+            let average = sum / numberOfLoops;
+
+            document.getElementById("result").innerText = average;
+            // document.querySelector("#result").innerText = average;
+            // alert(`The average of the numbers entered is ${average}`);
+        </script>
+    </body>
+</html>

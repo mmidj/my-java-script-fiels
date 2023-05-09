@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WHILE PRACTICE — 2</title>
+    </head>
+    <body>
+        <h1>WHILE PRACTICE — 2</h1>
+
+        <script>
+            /*
+
+Q — Write a program that finds how many numbers that have the total of more than 2000 when they are written in an order beginning from 100 to 200 (exclusive).
+
+            */
+
+            function countSum() {
+                let sum = 0;
+                let sPoint = 100;
+                let ePoint = 200;
+                let checkNum = 2000;
+                let count = 0;
+                let cycle = "";
+
+                while (sum < checkNum) {
+                    sum += sPoint;
+                    cycle += sPoint + ",";
+                    sPoint++;
+                    count++;
+
+                    if (sPoint > ePoint) {
+                        break;
+                    }
+                }
+
+                console.log(count);
+                console.log(cycle);
+                alert(`${count} ———— ${sum}`);
+                console.log(`${count} ———— ${sum}`);
+            }
+
+            countSum();
+
+            // 100 + 101 + 102 + 103 + 104 + ... >= 2000
+
+            // 100 - 200
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>IF PRACTICE — 2</title>
+    </head>
+    <body>
+        <h1>IF PRACTICE — 2</h1>
+        <label for="price">Please enter the price information</label>
+        <input type="number" id="price" onkeyup="calculateDiscount()" />
+        <!-- instead of onclick, for the input section, you can calculate the result after clicking on every key on your keyboard. To do such thing there is an attribute called "onkeyup" -->
+        <button onclick="calculateDiscount()">Calculate Discount</button>
+        <h3 id="result">Discounted Price:</h3>
+
+        <script>
+            /*Q — Write a program with a textbox:
+1 – If the price information received is greater than 500, then apply 10% discount and write the result in a label, 
+2 - If not, then display the price the way it is.*/
+
+            function calculateDiscount() {
+                let price = +document.querySelector("#price").value;
+                // let price = Number(document.querySelector("#price").value);
+                console.log(price);
+                let result = document.querySelector("#result");
+
+                if (price > 500) {
+                    //price = price - (price * 10 / 100);
+                    //price = price * 0.9;
+                    price *= 0.9;
+                }
+
+                result.innerText = `Discounted Price: ${price}`;
+            }
+        </script>
+    </body>
+</html>

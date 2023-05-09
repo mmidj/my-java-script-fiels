@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>IF ELSE PRACTICE — 3 — BODY MASS</title>
+    </head>
+    <body>
+        <h1>IF ELSE PRACTICE — 3 — BODY MASS</h1>
+        <input type="number" id="weight" placeholder="i.e ... kg" />
+        <br />
+        <br />
+        <label for="height">Height (please write in meters):</label>
+        <input type="number" id="height" placeholder="i.e ... meters" />
+        <br />
+        <br />
+        <button onclick="BMI()">Calculate Body Mass</button>
+        <p id="text"></p>
+
+        <script>
+            /*
+            
+Q — Write a program that receives weight and height.
+
+1 – If the received height and weight is NOT between the ideal weight gap, display “NOT ideal”
+
+2 – if it is, display “ideal”;
+
+formula for body mass index:
+body mass index = weight / height ** 2  (w = kg, h = meters)
+
+            */
+
+            function BMI() {
+                let weight = +document.querySelector("#weight").value;
+                // let weight = Number(document.querySelector("#weight").value);
+                let height = +document.querySelector("#height").value;
+                // let height = Number(document.querySelector("#height").value);
+                const text = document.querySelector("#text");
+
+                let bmi = weight / height ** 2;
+
+                const idealMin = 18.5;
+                const idealMax = 25;
+
+                if (bmi > idealMin && bmi < idealMax) {
+                    text.innerHTML = `IDEAL. Your body mass is ${bodyMassIndex.toFixed()}`;
+                } else {
+                    text.innerHTML = `NOT IDEAL! Your body mass is ${bodyMassIndex}`;
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let avg = 53;
+
+            const grades = {
+                midterm: 70,
+                final: 88,
+            };
+
+            const checkIfPassed = (grade1, grade2) => {
+                let sum = grade1 + grade2;
+                let passed = false;
+                if (sum / 2 > avg) {
+                    passed = true;
+                }
+
+                return passed;
+            };
+
+            console.log(grades.midterm, grades.final);
+
+            console.log(checkIfPassed(grades.midterm, grades.final));
+
+            if (checkIfPassed(grades.midterm, grades.final)) {
+                alert("You've passed the exam!");
+            } else {
+                alert("You couldn't pass!");
+            }
+        </script>
+    </body>
+</html>

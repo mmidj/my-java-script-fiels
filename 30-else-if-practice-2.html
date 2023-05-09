@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ELSE IF — PRACTICE 2</title>
+    </head>
+    <body>
+        <h1>ELSE IF — PRACTICE 2</h1>
+
+        <input
+            type="number"
+            id="price"
+            placeholder="enter the price"
+            onkeyup="calculatePrice()"
+        />
+        <!-- <button onclick="calculatePrice()">CALCULATE</button> -->
+        <p id="result"></p>
+
+        <script>
+            /*
+
+            Q — Write a program with a textbox:
+
+            1 – If the price information received is greater than 500, then apply 10% discount and write the result in a label,
+            2 – If it is greater than 300, apply 7% discount and display it in a label.
+            3 – If it is not, apply 5% discount and display it in a label.
+
+
+            */
+            function calculatePrice() {
+                let price = +document.querySelector("#price").value;
+                // let price = Number(document.querySelector("#price").value);
+                let result = document.querySelector("#result");
+
+                if (price > 500) {
+                    price *= 0.9; // price = price - (price * 10 / 100);
+                } else if (price > 300) {
+                    price *= 0.93; // price = price - (price * 7 / 100);
+                } else {
+                    price *= 0.95; // price = price - (price * 5 / 100);
+                }
+
+                result.innerText = `Discounted Price: ${price}`;
+            }
+        </script>
+    </body>
+</html>

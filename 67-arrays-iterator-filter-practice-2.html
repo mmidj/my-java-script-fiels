@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ITERATOR METHODS — FILTER — PRACTICE 2 — PIPELINE</title>
+    </head>
+    <body>
+        <h1>ITERATOR METHODS — FILTER — PRACTICE 2 — PIPELINE</h1>
+        <script>
+            /*
+            
+            Q — Write a program with the following coordinates:
+
+            coordinates = [ -100, 150, -32, 43, -20 ];
+
+            1 – Select negative coordinates,
+
+            2 – Convert them into positive numbers,
+            
+            3 – Store the new values in a new array.
+
+            */
+
+            coordinates = [-100, 150, -32, 43, -20];
+
+            // const negativeCoordinates = coordinates.filter((coord) => {
+            //     console.log(coord);
+            //     console.log(coord < 0);
+            //     return coord < 0;
+            // });
+
+            // console.log(negativeCoordinates);
+
+            // const positiveCoordinates = negativeCoordinates.map((coord) => {
+            //     console.log(Math.abs(coord));
+            //     console.log(coord * -1);
+            //     return Math.abs(coord);
+            // });
+
+            // console.log(positiveCoordinates);
+
+            // console.log(
+            //     coordinates.filter((coord) => {
+            //         console.log(coord);
+            //         console.log(coord < 0);
+            //         return coord < 0;
+            //     })
+            // );
+
+            // const newCoordinates = coordinates
+            //     .filter((coord) => {
+            //         return coord < 0;
+            //     })
+            //     .map((coord) => {
+            //         return Math.abs(coord);
+            //     });
+
+            const newCoordinates = coordinates
+                .filter((coord) => coord < 0)
+                .map((coord) => Math.abs(coord));
+
+            console.log(newCoordinates);
+        </script>
+    </body>
+</html>

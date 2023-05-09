@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FOR PRACTICE — 3</title>
+        <style>
+            p {
+                background-color: #ddffdd;
+                border-left: 6px solid #108057;
+                padding: 10px;
+            }
+            .image-container {
+                background-image: url("./assets/img/z.jpg");
+                background-size: cover;
+                position: relative;
+                height: 300px;
+            }
+
+            .text {
+                background-color: white;
+                color: black;
+                font-size: 10vw;
+                font-weight: bold;
+                margin: 0 auto;
+                padding: 10px;
+                width: 50%;
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                mix-blend-mode: screen;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>FOR PRACTICE — 3</h1>
+        <div class="image-container">
+            <div class="text">Number Counting</div>
+        </div>
+        <code>
+            <p id="result"></p>
+        </code>
+        <script>
+            /*
+
+            Q — Write a program that finds how many numbers between 500 and 1000 (inclusive) can be both separately and together divided by 3 and 7, and displays the outcome.
+
+            i.e “There are … numbers that can be divided by 3, between 500 and 1000.”
+
+                        */
+            let sPoint = 500;
+            let ePoint = 1000;
+            let d3 = 0; // if the number can be divided by 3
+            let d7 = 0; // if the number can be divided by 7
+            let d37 = 0; // if the number can be divided by 3 and 7 at the same time
+
+            for (let i = sPoint; i <= ePoint; i++) {
+                if (i % 3 === 0) {
+                    d3++;
+                }
+
+                if (i % 7 === 0) {
+                    d7++;
+                }
+
+                if (i % 3 === 0 && i % 7 === 0) {
+                    d37++;
+                }
+            }
+            console.log(d3, d7, d37);
+
+            let result = document.querySelector("#result");
+
+            result.innerHTML = `<mark>${d3}</mark> numbers are divisible by 3. <br />
+            <mark>${d7}</mark> numbers are divisible by 7. <br /> 
+            <mark>${d37}</mark> numbers are divisible by both 3 and 7`;
+        </script>
+    </body>
+</html>
